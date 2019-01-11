@@ -5,7 +5,7 @@
 
 In this project, deep neural networks and convolutional neural networks are implemented in order to clone driving behavior. Keras is used for fraining, validation and testing. The model will output a steering angle to an autonomous vehicle. Also, the output is visualised in a car simulator to show that the car can drive autonomously around a track.
 
-![example]
+![track1]
 ---
 
 ## The Project
@@ -123,4 +123,5 @@ I finally randomly shuffled the data set and put Y% of the data into a validatio
 
 I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The ideal number of epochs was Z as evidenced by ... I used an adam optimizer so that manually training the learning rate wasn't necessary.
 
-[example]: examples/sim-image.png
+[track1]: examples/track1.png
+[track2]: examples/track2.png
