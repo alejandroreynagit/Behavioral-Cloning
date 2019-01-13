@@ -400,22 +400,19 @@ blockquote {
 <li>Summarize the results with a written report</li>
 </ul>
 <hr>
-<h1 id="update-the-following">UPDATE THE FOLLOWING ...</h1>
-<h3 id="here-i-will-consider-the-rubric-points-individually-and-describe-how-i-addressed-each-point-in-my-implementation">Here I will consider the <a href="https://review.udacity.com/#!/rubrics/432/view">rubric points</a> individually and describe how I addressed each point in my implementation.</h3>
-<hr>
 <h3 id="files-submitted-code-quality">Files Submitted &amp; Code Quality</h3>
 <h4 id="1-submission-includes-all-required-files-and-can-be-used-to-run-the-simulator-in-autonomous-mode">1. Submission includes all required files and can be used to run the simulator in autonomous mode</h4>
 <p>My project includes the following files:</p>
 <ul>
 <li>model.py containing the script to create and train the model</li>
-<li>model.ipynb containing the script to create and train the model, including visusalisations</li>
+<li>model.ipynb, model.html containing the script to create and train the model, including visusalisations</li>
 <li>drive.py for driving the car in autonomous mode</li>
 <li>A folder named models containing trained convolution neural networks models.</li>
 <li>README.md, README.pdf and README.html summarising the results</li>
 </ul>
 <h4 id="2-submission-includes-functional-code">2. Submission includes functional code</h4>
 <p>Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing</p>
-<pre class="hljs"><code><div>python drive.py &lt;modelname.h5&gt;
+<pre class="hljs"><code><div>python drive.py models/&lt;modelname.h5&gt;
 </div></code></pre>
 <p>The model <strong>model_LeNet.h5</strong> generate the best results, i.e., vehicle is able to drive autonomously around the track without leaving the road.</p>
 <h4 id="3-submission-code-is-usable-and-readable">3. Submission code is usable and readable</h4>

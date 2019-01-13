@@ -19,19 +19,13 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 ---
-
-# UPDATE THE FOLLOWING ...
-
-### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
-
----
 ### Files Submitted & Code Quality
 
 #### 1. Submission includes all required files and can be used to run the simulator in autonomous mode
 
 My project includes the following files:
 * model.py containing the script to create and train the model
-* model.ipynb containing the script to create and train the model, including visusalisations
+* model.ipynb, model.html containing the script to create and train the model, including visusalisations
 * drive.py for driving the car in autonomous mode
 * A folder named models containing trained convolution neural networks models.
 * README.md, README.pdf and README.html summarising the results
@@ -40,8 +34,8 @@ My project includes the following files:
 #### 2. Submission includes functional code
 Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing 
 
-```sh
-python drive.py <modelname.h5>
+```
+python drive.py models/<modelname.h5>
 ```
 The model **model_LeNet.h5** generate the best results, i.e., vehicle is able to drive autonomously around the track without leaving the road.
 
