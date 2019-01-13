@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+	font-size: 14px;
+	padding: 0 12px;
+	line-height: 22px;
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	color: #4080D0;
+	text-decoration: none;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 code,
+h2 code,
+h3 code,
+h4 code,
+h5 code,
+h6 code {
+	font-size: inherit;
+	line-height: auto;
+}
+
+a:hover {
+	color: #4080D0;
+	text-decoration: underline;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left: 5px solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 14px;
+	line-height: 19px;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+.mac code {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+/** Theming */
+
+.vscode-light,
+.vscode-light pre code {
+	color: rgb(30, 30, 30);
+}
+
+.vscode-dark,
+.vscode-dark pre code {
+	color: #DDD;
+}
+
+.vscode-high-contrast,
+.vscode-high-contrast pre code {
+	color: white;
+}
+
+.vscode-light code {
+	color: #A31515;
+}
+
+.vscode-dark code {
+	color: #D7BA7D;
+}
+
+.vscode-light pre:not(.hljs),
+.vscode-light code > div {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre:not(.hljs),
+.vscode-dark code > div {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre:not(.hljs),
+.vscode-high-contrast code > div {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+.vscode-light blockquote,
+.vscode-dark blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.vscode-high-contrast blockquote {
+	background: transparent;
+	border-color: #fff;
+}
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family:  "Meiryo", "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback";
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+</head>
+<body>
+<h1 id="behavioral-cloning-project">Behavioral Cloning Project</h1>
+<p><a href="http://www.udacity.com/drive"><img src="https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg" alt="Udacity - Self-Driving Car NanoDegree"></a></p>
+<h2 id="writeup---daniel-alejandro-reyna-torres">Writeup - Daniel Alejandro Reyna Torres</h2>
+<p>In this project, deep neural networks and convolutional neural networks are implemented in order to clone driving behavior. Keras is used for fraining, validation and testing. The model will output a steering angle to an autonomous vehicle. Also, the output is visualised in a car simulator to show that the car can drive autonomously around a track.</p>
+<h2 id="track1"><img src="examples/track1.png" alt="track1"></h2>
+<h2 id="the-project">The Project</h2>
+<p>The goals / steps of this project are the following:</p>
+<ul>
+<li>Use the simulator to collect data of good driving behavior</li>
+<li>Build, a convolution neural network in Keras that predicts steering angles from images</li>
+<li>Train and validate the model with a training and validation set</li>
+<li>Test that the model successfully drives around track one without leaving the road</li>
+<li>Summarize the results with a written report</li>
+</ul>
+<hr>
+<h1 id="update-the-following">UPDATE THE FOLLOWING ...</h1>
+<h3 id="here-i-will-consider-the-rubric-points-individually-and-describe-how-i-addressed-each-point-in-my-implementation">Here I will consider the <a href="https://review.udacity.com/#!/rubrics/432/view">rubric points</a> individually and describe how I addressed each point in my implementation.</h3>
+<hr>
+<h3 id="files-submitted-code-quality">Files Submitted &amp; Code Quality</h3>
+<h4 id="1-submission-includes-all-required-files-and-can-be-used-to-run-the-simulator-in-autonomous-mode">1. Submission includes all required files and can be used to run the simulator in autonomous mode</h4>
+<p>My project includes the following files:</p>
+<ul>
+<li>model.py containing the script to create and train the model</li>
+<li>model.ipynb containing the script to create and train the model, including visusalisations</li>
+<li>drive.py for driving the car in autonomous mode</li>
+<li>A folder named models containing trained convolution neural networks models.</li>
+<li>README.md, README.pdf and README.html summarising the results</li>
+</ul>
+<h4 id="2-submission-includes-functional-code">2. Submission includes functional code</h4>
+<p>Using the Udacity provided simulator and my drive.py file, the car can be driven autonomously around the track by executing</p>
+<pre class="hljs"><code><div>python drive.py &lt;modelname.h5&gt;
+</div></code></pre>
+<p>The model <strong>model_LeNet.h5</strong> generate the best results, i.e., vehicle is able to drive autonomously around the track without leaving the road.</p>
+<h4 id="3-submission-code-is-usable-and-readable">3. Submission code is usable and readable</h4>
+<p>The model.py file contains the code for training and saving the convolution neural network. The file shows the pipeline I used for training and validating the model, and it contains comments to explain how the code works.</p>
+<h3 id="model-architecture-and-training-strategy">Model Architecture and Training Strategy</h3>
+<h4 id="1-creation-of-the-training-set-training-process">1. Creation of the Training Set &amp; Training Process</h4>
+<p>This project aims to clone or mimic our behaviour while driving and make a car drive autonmosly. In order to do this, I had to o capture good driving behavior, I recorded (through the Udacity simulator) two laps on track one using center lane driving. First track is a normal complete lap and the second is an inverted lap (from exit to start). Here is an example image of center lane driving:</p>
+<p><img src="examples/centre.png" alt="centre"></p>
+<p>I then recorded the vehicle recovering from the left side and right sides of the road back to center so that the vehicle would learn to recover when driving off the centre because side images provide more useful information than if we were training only with centre images. There are some potential failure points during driving, so I also captured this specific images for vehicle recovering:</p>
+<p><img src="examples/lane_considerations.png" alt="lane_considerations"></p>
+<p>Then I repeated this process on track two in order to get more data points.</p>
+<p>To augment the data set, I also flipped images and angles thinking that this would help for training because most of the time the model was learning to steer to the left, by addiing flipped versions of the images we can tackle. Now the vehicle learns to steer either to the right or to the left. For example, here is an image that has then been flipped:</p>
+<p><img src="examples/orig_flipped.png" alt="orig_flipped"></p>
+<p>After the collection process, I had the following:</p>
+<ul>
+<li>Number of training examples = 7596 (original + flipped versions)</li>
+<li>Image data shape = (160, 320, 3)</li>
+<li>Number of classes = 41</li>
+</ul>
+<h4 id="2-data-pre-processing">2. Data Pre-processing</h4>
+<p>Once data was collected, I then normalised it. Normalisation is useful to eliminates big variations across the data set. I decided to implement a 0-1 normalisation, i.e., data ranges from 0 to 1 and then zero-mean centered.</p>
+<p>Last feature was to crop the image 70 pixels from top and 20 pixels from bottom. The reason of this is to avoid the model to &quot;over&quot; learn unnecessary features like the sky, trees and even the car hood.</p>
+<p><img src="examples/crop.png" alt="crop"></p>
+<h4 id="3-model-overview">3. Model Overview</h4>
+<p>This work was based on the LeNet5 architecture introduced by <a href="http://yann.lecun.com/exdb/publis/pdf/lecun-98.pdf">LeCun et al.</a> in their 1998. Changes to the architecture was the input size. LeNet5 originally takes inputs of (28x28x1), in this case we feed the model with images of shape (160x320x3). Another change was the input depth, I increased it from 6 to 8, the rest is pretty much the same as LeNet.</p>
+<p>LeNet5 architecture:
+<img src="examples/lenet.png" alt="lenet"></p>
+<h4 id="4-training-set-validation-set">4. Training Set &amp; Validation Set</h4>
+<p>I randomly shuffled the complete data set and put 20% of the data into a validation set (straight on the model.fit function).</p>
+<ul>
+<li>Training: 6076 images</li>
+<li>Validation: 1520 images</li>
+</ul>
+<p>I used this training data for training the model. The validation set helped determine if the model was over or under fitting. The final number of epochs used for training was 5. I used an adam optimizer so that manually training the learning rate wasn't necessary.</p>
+<h4 id="5-final-model-architecture">5. Final Model Architecture</h4>
+<p>The overall strategy for deriving a model architecture was to tests different data sets, at the end I came up with a collection of three sets of images. The first one capturing a complete turn, the second one intended to capture left and right turns, side objects, lane lines, etc., and finally the the last one was to consider the track in the other way.</p>
+<p>The final model hyperparameters:</p>
+<ul>
+<li>Validation data split: 20%</li>
+<li>Color channels: 3</li>
+<li>Epochs: 10</li>
+<li>Learning rate: 0.001 (default)</li>
+<li>Optimiser: Adam</li>
+<li>Loss function: MSE (Mean Squared Error)</li>
+</ul>
+<p>One interesting point is that my model does not contain dropout layers. My first believe was to include it because dropout techniques are very helpfull in order to reduce overfitting. Mean squared erros of both training and validation set were reasonable stable and this derive in nice results. I actually try once with droput layer (a droput rate of .20 and .70), after the last convolution but results were not that accurate.</p>
+<p>The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.</p>
+<p>My final model consists of the following architecture:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Layer</th>
+<th style="text-align:center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Input</td>
+<td style="text-align:center">160x320x3 COLOURED image</td>
+</tr>
+<tr>
+<td style="text-align:center">Convolution 3x3</td>
+<td style="text-align:center">1x1 stride, same padding, outputs 28x28x8</td>
+</tr>
+<tr>
+<td style="text-align:center">RELU</td>
+<td style="text-align:center">Activation (Nonlinearity)</td>
+</tr>
+<tr>
+<td style="text-align:center">Max pooling</td>
+<td style="text-align:center">2x2 stride,  outputs 14x14x6</td>
+</tr>
+<tr>
+<td style="text-align:center">Convolution 3x3</td>
+<td style="text-align:center">1x1 stride, same padding, outputs 10x10x16</td>
+</tr>
+<tr>
+<td style="text-align:center">RELU</td>
+<td style="text-align:center">Activation (Nonlinearity)</td>
+</tr>
+<tr>
+<td style="text-align:center">Max pooling</td>
+<td style="text-align:center">2x2 stride,  outputs 5x5x16</td>
+</tr>
+<tr>
+<td style="text-align:center">Flatten</td>
+<td style="text-align:center">Flatten the output shape 3D-&gt;1D</td>
+</tr>
+<tr>
+<td style="text-align:center">Fully connected</td>
+<td style="text-align:center">Array of 120 elements</td>
+</tr>
+<tr>
+<td style="text-align:center">RELU</td>
+<td style="text-align:center">Activation (Nonlinearity)</td>
+</tr>
+<tr>
+<td style="text-align:center">Max pooling</td>
+<td style="text-align:center">2x2 stride,  outputs 5x5x16</td>
+</tr>
+<tr>
+<td style="text-align:center">Fully connected</td>
+<td style="text-align:center">Array of 84 elements</td>
+</tr>
+<tr>
+<td style="text-align:center">RELU</td>
+<td style="text-align:center">Activation (Nonlinearity)</td>
+</tr>
+<tr>
+<td style="text-align:center">Fully connected</td>
+<td style="text-align:center">1 output (steering angle)</td>
+</tr>
+</tbody>
+</table>
+<p>Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road in multiple scenarios where the model was failing, and doing turns in the other way.</p>
+<h4 id="6-final-results">6. Final Results</h4>
+<p>The final step was to run the simulator to see how well the car was driving around track one. There were few spots where the vehicle fell off the track, these spots were considered during creation of the training set. Doing a lap in the other way around made a huge positive difference when testing the model through the simulator.</p>
+<p>At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road!</p>
+<p>Here's a <a href="https://drive.google.com/file/d/1FKw0-DGbL_CBJb0PR7vC9NeMewVOn62Q/view?usp=sharing">link to my video result</a>.</p>
+<hr>
+<h2 id="discussion">Discussion</h2>
+<p>It is very interesting how the deep learning approach to make a car drive autonomously is also very powerful. In this case my model performs well for track 1 but for track 2 still need to be trained.</p>
+<p>One further step would be to try other deep learning architectures. I based my work on the LeNet-5 architecture, next step is to try the <a href="https://devblogs.nvidia.com/deep-learning-self-driving-cars/">NVIDIA approach for self drving cars</a> a very powerful deep learning architecture for self-driving cars.</p>
+<p>Thank you for reading this report.</p>
+<p><em>Daniel</em></p>
+
+</body>
+</html>
